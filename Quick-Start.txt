@@ -1,0 +1,22 @@
+Zoop Go for Windows x64
+======================
+
+Record a screen demo and export a shareable video with automatic click zoom.
+
+1. Extract the entire ZIP into a folder on your PC. Open Zoop Go.exe from
+   that folder and keep ffmpeg.exe beside it.
+2. Choose Display, Window, or Region. For a region, draw on the display map
+   or enter its pixel coordinates and size. Pick MP4 or GIF and a capture
+   frame rate.
+3. Press Ctrl+Shift+R or choose Start recording. Press the same shortcut
+   or choose Stop recording to finish.
+4. Find the export in the Zoop Go folder inside Windows Videos. In Zoop Go,
+   use Open folder to find it or Copy file to copy it again. With Copy file
+   after export enabled, paste directly into apps that accept pasted files.
+
+Supports Windows 10 22H2 and Windows 11 on x64 PCs. The portable ZIP uses
+the Microsoft Edge WebView2 Runtime already installed on your PC. If it is
+missing, use the Zoop Go offline setup package or install the x64 Evergreen
+Standalone Installer from Microsoft.
+
+https://developer.microsoft.com/microsoft-edge/webview2/

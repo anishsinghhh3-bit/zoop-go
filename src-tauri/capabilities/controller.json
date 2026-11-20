@@ -1,0 +1,15 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "recording-controls",
+  "description": "Show capture status and stop the active recording.",
+  "windows": [
+    "controller"
+  ],
+  "permissions": [
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "allow-app-state",
+    "allow-stop-recording",
+    "core:window:allow-start-dragging"
+  ]
+}

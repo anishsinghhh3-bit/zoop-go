@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Zoop Go",
+  "version": "1.0.1",
+  "identifier": "com.zoopgo.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Zoop Go",
+        "width": 1080,
+        "height": 816,
+        "minWidth": 740,
+        "minHeight": 560,
+        "center": true,
+        "backgroundColor": "#F8F9FC",
+        "theme": "Light"
+      },
+      {
+        "label": "controller",
+        "title": "Zoop Go recording controls",
+        "url": "index.html?controller",
+        "width": 255,
+        "height": 76,
+        "decorations": false,
+        "resizable": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "focus": false,
+        "visible": false,
+        "shadow": false,
+        "backgroundColor": "#161B2C",
+        "theme": "Light"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' ipc: http://ipc.localhost; img-src 'self' data:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'; frame-src 'none'",
+      "capabilities": [
+        "recorder",
+        "recording-controls"
+      ]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "shortDescription": "Local screen recorder with automatic click zoom",
+    "externalBin": [
+      "binaries/ffmpeg"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller",
+        "silent": true
+      },
+      "nsis": {
+        "installMode": "currentUser",
+        "installerIcon": "icons/icon.ico",
+        "compression": "zlib"
+      }
+    },
+    "resources": {
+      "../LICENSE": "LICENSE.txt",
+      "../THIRD-PARTY-NOTICES.txt": "THIRD-PARTY-NOTICES.txt",
+      "../APP-DEPENDENCY-NOTICES.txt": "APP-DEPENDENCY-NOTICES.txt"
+    }
+  }
+}
